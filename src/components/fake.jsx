@@ -70,10 +70,7 @@ function SeatSelection() {
         // Toggle status
         const newStatus = isCurrentlySelected ? "available" : "selected";
 
-        return {
-          ...seat,
-          status: newStatus,
-        };
+        return { ...seat, status: newStatus };
       });
     });
 
@@ -101,38 +98,57 @@ function SeatSelection() {
     }
   };
 
-
+  // ============================
   // BOOK TICKET
+  // ============================
+
   const handleBookTicket = () => {
     // Check seat selection
     if (selectedSeats.length === 0) {
       alert("Please select at least one seat.");
+
       return;
     }
+
     // Generate booking ID
     const bookingId = "MOV-" + Date.now();
+
     // Calculate total
     const totalPrice = selectedSeats.length * movie.price;
+
     // Create booking object
     const newTicket = {
       bookingId,
+
       customerName: user.name,
+
       customerEmail: user.email,
+
       movieTitle: movie.title,
+
       date: movie.date,
+
       time: movie.time,
+
       seats: selectedSeats,
+
       ticketCount: selectedSeats.length,
+
       pricePerTicket: movie.price,
+
       totalPrice,
+
       bookingDate: new Date().toISOString(),
+
       status: "Confirmed",
     };
 
     // Get previous tickets
     const existingTickets = JSON.parse(localStorage.getItem("myTickets")) || [];
+
     // Add new ticket
     const updatedTickets = [...existingTickets, newTicket];
+
     // Save tickets
     localStorage.setItem("myTickets", JSON.stringify(updatedTickets));
 
@@ -191,13 +207,21 @@ function SeatSelection() {
             disabled={seat.status === "reserved"}
             style={{
               width: "40px",
+
               height: "40px",
+
               borderRadius: "6px",
+
               border: "none",
+
               background: getSeatColor(seat.status),
+
               color: seat.status === "reserved" ? "#fff" : "#333",
+
               cursor: seat.status === "reserved" ? "not-allowed" : "pointer",
+
               fontWeight: "bold",
+
               transition: "transform 0.1s ease",
             }}
           >
@@ -274,6 +298,7 @@ function SeatSelection() {
           🎟️ Book Ticket
         </button>
       </div>
+      
     </div>
   );
 }

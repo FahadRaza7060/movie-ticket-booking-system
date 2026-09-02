@@ -60,7 +60,7 @@ function Card() {
 
                     <p className="card-text">{movie.description}</p>
 
-                    <Link to={`/select-seat/${movie.id || movie._id}`} className="btn btn-primary">
+                    <Link to={`/select-seat/${movie.id || movie._id}`} className="btn btn-danger">
                       Book Tickets
                     </Link>
 

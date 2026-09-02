@@ -6,6 +6,7 @@ import ForgotPassword from "./auth/ForgotPassword";
 import LandingPage from "./components/LandingPage";
 import Card from "./components/Card";
 import SeatSelection from "./components/SeatSelection";
+import MyTickets from "./components/MyTickets";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/movies" element={<Card />} />
         <Route path="/select-seat/:movieId" element={<SeatSelection /> } />
+        <Route path="/mytickets" element={<MyTickets />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
