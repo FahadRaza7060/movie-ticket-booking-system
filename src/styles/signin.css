@@ -1,0 +1,370 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+.validation-error {
+  display: block;
+  color: #ffffff;
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.input-error {
+  border: 1px solid #ff4d4d !important;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.signin-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+    
+    /* background:
+    radial-gradient(circle at top,
+    rgba(229,9,20,.15),
+    transparent 35%),
+
+    linear-gradient(
+    135deg,
+    #090909,
+    #111,
+    #1a1a1a); */
+
+    background:
+    radial-gradient(
+      circle at top,
+      rgba(229, 9, 20, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #252525,
+      #303030,
+      #3a3a3a
+    );
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.signin-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    top:-120px;
+    right:-120px;
+
+    border-radius:50%;
+
+    background:rgba(229,9,20,.15);
+
+    filter:blur(100px);
+
+}
+
+.signin-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    left:-100px;
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:rgba(229,9,20,.08);
+
+    filter:blur(100px);
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.signin-container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:10;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.signin-form {
+    width:100%;
+    max-width:430px;
+    padding:38px;
+    border-radius:18px;
+    background:rgba(18,18,18,.92);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.55),
+    0 0 30px rgba(229,9,20,.08);
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.signin-logo {
+    text-align:center;
+    font-size:30px;
+    font-weight:800;
+    color:white;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+.signin-logo span {
+    color:#e50914;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.signin-form h2 {
+    text-align:center;
+    color:white;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.signin-subtitle {
+    text-align:center;
+    color:#999;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.input-group {
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.input-group label {
+    color:#ddd;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.input-group input {
+    padding:13px 15px;
+    border-radius:8px;
+    border:1px solid #333;
+    background:#161616;
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-group input::placeholder {
+    color:#666;
+}
+
+.input-group input:focus {
+    border-color:#e50914;
+    background:#1b1b1b;
+    box-shadow:0 0 0 3px rgba(229,9,20,.15);
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.signin-links {
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.forgot-link {
+    color:#bbbbbb;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.forgot-link:hover {
+    color:#e50914;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.signin-btn {
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(
+    135deg,
+    #e50914,
+    #b20710);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signin-btn:hover {
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(229,9,20,.35);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.signin-divider {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:25px 0;
+}
+
+.signin-divider span {
+    flex:1;
+    height:1px;
+    background:#333;
+}
+
+.signin-divider p {
+    color:#777;
+    font-size:12px;
+}
+
+/* ===========================
+   SIGNUP
+=========================== */
+
+.signup-text {
+    text-align:center;
+    color:#aaa;
+    font-size:14px;
+}
+
+.signup-text a {
+    color:#e50914;
+    margin-left:6px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.signup-text a:hover {
+    color:#ff3742;
+}
+
+/* ====== show icon button css */
+.password-wrapper { 
+  position: relative; 
+  width: 100%;
+}
+/* Password input */ 
+.password-wrapper input { 
+  width: 100%; 
+  padding-right: 45px; 
+}
+/* Eye button */ 
+.password-toggle { 
+  position: absolute; 
+  right: 12px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background: transparent; 
+  border: none; 
+  color: #777; 
+  font-size: 18px; 
+  cursor: pointer; 
+  padding: 5px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+/* Eye hover */ 
+.password-toggle:hover { 
+  color: #ffffff; 
+}
+/* Remove button focus outline */ 
+.password-toggle:focus { 
+  outline: none; 
+  box-shadow: none; 
+}
+/* Error input */ 
+.input-error { 
+  border: 1px solid #ff4d4d !important; 
+  box-shadow: 0 0 6px rgba(255, 77, 77, 0.25); 
+}
+/* Validation error */ 
+.validation-error { 
+  display: block; 
+  color: #ffffff; 
+  font-size: 13px; 
+  margin-top: 6px; 
+  font-weight: 500; 
+}
+.validation-error::before { 
+  content: "⚠ "; 
+  color: #ff4d4d; 
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:576px) {
+    .signin-form {
+        padding:28px 22px;
+    }
+
+    .signin-logo {
+        font-size:26px;
+    }
+
+    .signin-form h2 {
+        font-size:24px;
+    }
+}

@@ -1,0 +1,27 @@
+.movies-section {
+  /* background: #111827; */
+   background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #000);
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.movie-card {
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.card-text {
+  color: #d1d5db;
+}
