@@ -12,6 +12,13 @@ function Navbar() {
     navigate("/signup");
   };
 
+  const handleLogout = () => {
+  localStorage.removeItem("accessToken");
+  localStorage.removeItem("user");
+
+  navigate("/signin");
+  };
+
   const handleMyBookings = () => {
     navigate("/mytickets");
   };
@@ -29,16 +36,30 @@ function Navbar() {
 
         <button
           className="navbar-bookings-btn"
+          onClick={handleGotoHome}
+        >
+          Home
+        </button>
+        
+        <button
+          className="navbar-bookings-btn"
           onClick={handleMyBookings}
         >
           My Bookings
         </button>
 
         <button
-          className="navbar-signup-btn"
+          className="navbar-bookings-btn"
           onClick={handleGotoSignUp}
         >
           Sign Up
+        </button>
+
+        <button
+          className="navbar-bookings-btn"
+          onClick={handleLogout}
+        >
+          Log out
         </button>
 
       </div>

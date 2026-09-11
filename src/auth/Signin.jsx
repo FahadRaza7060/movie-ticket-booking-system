@@ -14,6 +14,7 @@ const signinSchema = z.object({
 });
 
 function Signin() {
+  
   const [showPassword, setShowPassword] = useState(false);
 
   const {
@@ -42,17 +43,17 @@ function Signin() {
       }
 
       const result = await response.json();
-      // console.log('Success', result);
+      console.log('Login Response', result);
       
-      // Save logged-in user in the local-storage
       const loggedInUser = {
         name: result.user?.name || data.email.split("@")[0],
-        email: result.user?.email || data.email,
+        email: result.user?.email || data.email
       };
 
       localStorage.setItem("user", JSON.stringify(loggedInUser));
+      localStorage.setItem("accessToken", result.accessToken);
 
-      navigate("/");
+      navigate('/');
 
     } catch (error) {
       console.error("Submission Error:", error);

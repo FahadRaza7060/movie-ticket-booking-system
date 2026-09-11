@@ -3,10 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 // Generate 8 x 8 seats
 const generateInitialSeats = () => {
+
   const rows = ["A", "B", "C", "D", "E", "F", "G", "H"];
-
   const totalSeatsPerRow = 8;
-
   const seatsData = [];
 
   rows.forEach((row) => {
@@ -38,10 +37,10 @@ function SeatSelection() {
     price: 500,
   };
 
-  // Get logged-in user
+  // Get logged-in user that is stored in local storage
   const user = JSON.parse(localStorage.getItem("user")) || {
-    name: "Guest User",
-    email: "guest@example.com",
+    name: "Dummy User",
+    email: "dummy@example.com",
   };
 
   // Seats
@@ -206,8 +205,6 @@ function SeatSelection() {
         ))}
       </div>
 
-      {/* LEGEND */}
-
       <div
         style={{
           display: "flex",
@@ -229,8 +226,6 @@ function SeatSelection() {
           <span>🟥</span> Reserved
         </div>
       </div>
-
-      {/* BOOKING SUMMARY */}
 
       <div
         style={{
@@ -271,7 +266,7 @@ function SeatSelection() {
             fontWeight: "bold",
           }}
         >
-          🎟️ Book Ticket
+          Book Ticket
         </button>
       </div>
     </div>

@@ -17,6 +17,7 @@ const signupSchema = z.object({
 });
 
 function Signup() {
+
   const [showPassword, setShowPassword] = useState(false); 
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -43,7 +44,7 @@ function Signup() {
       }
 
       const result = await response.json();
-      // console.log("Success", result);
+      console.log("Success", result);
 
       navigate('/signin');
 
